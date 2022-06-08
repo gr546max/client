@@ -1,0 +1,40 @@
+{
+    "name": "customers/client.max",
+    "description": "customers DB",
+    "minimum-stability": "stable",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "user",
+            "email": "email@example.com"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ],
+    "require-dev": {
+        "codeception/codeception": "^4.1",
+        "codeception/module-phpbrowser": "^1.0.0",
+        "codeception/module-asserts": "^1.0.0",
+        "codeception/module-db": "^2.0",
+        "codeception/module-filesystem": "^2.0",
+        "codeception/module-webdriver": "^2.0"
+    },
+    "require": {
+        "fzaninotto/faker": "*",
+        "yiisoft/yii2": "*",
+        "yiisoft/yii2-gii": "*",
+        "yiisoft/yii2-bootstrap": "~2.0.0",
+        "codeception/specify": "*",
+        "codeception/verify": "*",
+        "twbs/bootstrap": "^5.1"
+    },
+    "config": {
+        "allow-plugins": {
+            "yiisoft/yii2-composer": true
+        }
+    }
+}
