@@ -1,0 +1,16 @@
+# Codeception Test Suite Configuration
+#
+# Suite for functional tests
+# Emulate web requests and make application process them
+# Include one of framework modules (Symfony2, Yii2, Laravel5, Phalcon4) to use it
+# Remove this suite if you don't use frameworks
+
+class_name: FunctionalTester
+modules:
+    enabled: [Db, Filesystem, Helper\Functional]
+    config:
+        Db:
+            dsn: 'mysql:host=localhost;dbname=crm_test'
+            user: 'root'
+            password: 'root'
+            dump: tests/_data/dump.sql
