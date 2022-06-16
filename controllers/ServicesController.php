@@ -140,26 +140,4 @@ class ServicesController extends Controller
         }
         throw new NotFoundHttpException('The requested page does not exist.');
     }
-
-    public function actionJson(){
-        $model = ServiceRecord::find()->all();
-        $data = array_map(function ($model) {return $model->attributes;}, $model);
-
-        $response = Yii::$app->response;
-        $response->format = Response::FORMAT_JSON;
-        $response->data = $data;
-
-        return $response;
-    }
-
-    public function actionYaml(){
-        $model = ServiceRecord::find()->all();
-        $data = array_map(function ($model) {return $model->attributes;}, $model);
-
-        $response = Yii::$app->response;
-        $response->format = YamlResponseFormatter::FORMAT;
-        $response->data = $data;
-
-        return $response;
-    }
 }

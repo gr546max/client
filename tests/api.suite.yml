@@ -1,0 +1,14 @@
+actor: ApiTester
+modules:
+    enabled:
+        - \Helper\Api
+        - PhpBrowser
+        - REST
+        - Db
+    config:
+        PhpBrowser:
+            url: 'http://client.max'
+        REST:
+            url: 'http://client.max'
+            depends: PhpBrowser
+            shortDebugResponse: 300

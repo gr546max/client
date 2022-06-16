@@ -9,3 +9,10 @@ extensions:
     enabled:
         - Codeception\Extension\RunFailed
 bootstrap: _bootstrap.php
+modules:
+    config:
+        Db:
+            dsn: 'mysql:host=localhost;dbname=crm'
+            user: 'root'
+            password: 'root'
+            dump: tests/_data/dump.sql

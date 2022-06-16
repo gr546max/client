@@ -3,6 +3,7 @@ return [
     'id' => 'crmapp',
     'basePath' => dirname(__DIR__),
     'homeUrl' => '/',
+    'bootstrap' => ['debug'],
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
@@ -41,13 +42,32 @@ return [
                     'class'=>'app\utilities\YamlResponseFormatter'
                 ]
             ]
-],
+        ],
+        'mail' => [
+            'class' => yii\swiftmailer\Mailer::className(),
+            'messageConfig' => [
+                'charset' => 'UTF-8',
+                'from' => 'noreply@crmapp.me'
+            ],
+            'transport' => [
+                'class' => 'Swift_MailTransport',
+            ],
+        ],
+        'assetManager' => [
+            'bundles' => (require __DIR__ . '/assets_compressed.php')
+        ],
     ],
     'modules' => [
         'gii' => [
             'class' => 'yii\gii\Module',
             'allowedIPs' => ['*']
-        ]
+        ],
+        'debug' => [
+            'class' => 'yii\debug\Module',
+        ],
+        'api' => [
+          'class' => 'app\api\ApiModule'
+        ],
     ],
     'extensions' => require(__DIR__.'/../vendor/yiisoft/extensions.php'),
 ];

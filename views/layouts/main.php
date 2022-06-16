@@ -4,7 +4,12 @@
  */
 use yii\helpers\Html;
 
-app\assets\ApplicationUiAssetBundle::register($this);
+app\assets\AllAsset::register($this);
+$this->registerLinkTag([
+    'rel' => 'shortcut icon',
+    'type' => 'image/x-icon',
+    'href' => '/images/favicon.ico',
+]);
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
