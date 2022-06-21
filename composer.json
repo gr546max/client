@@ -1,29 +1,25 @@
 {
-    "name": "customers/client.max",
-    "description": "customers DB",
-    "minimum-stability": "stable",
-    "license": "proprietary",
     "authors": [
         {
-            "name": "user",
+            "name": "gr546max",
             "email": "email@example.com"
         }
     ],
+    "config": {
+        "allow-plugins": {
+            "yiisoft/yii2-composer": true
+        }
+    },
+    "description": "customers DB",
+    "license": "proprietary",
+    "minimum-stability": "stable",
+    "name": "customers/client.max",
     "repositories": [
         {
             "type": "composer",
             "url": "https://asset-packagist.org"
         }
     ],
-    "require-dev": {
-        "codeception/codeception": "^4.1",
-        "codeception/module-phpbrowser": "^1.0.0",
-        "codeception/module-asserts": "^1.0.0",
-        "codeception/module-db": "^2.0",
-        "codeception/module-filesystem": "^2.0",
-        "codeception/module-webdriver": "^2.0",
-        "codeception/module-rest": "^2.0"
-    },
     "require": {
         "fzaninotto/faker": "*",
         "yiisoft/yii2": "*",
@@ -35,9 +31,13 @@
         "yiisoft/yii2-debug": "*",
         "yiisoft/yii2-swiftmailer": "*"
     },
-    "config": {
-        "allow-plugins": {
-            "yiisoft/yii2-composer": true
-        }
+    "require-dev": {
+        "codeception/codeception": "^4.1",
+        "codeception/module-phpbrowser": "^1.0.0",
+        "codeception/module-asserts": "^1.0.0",
+        "codeception/module-db": "^2.0",
+        "codeception/module-filesystem": "^2.0",
+        "codeception/module-webdriver": "^2.0",
+        "codeception/module-rest": "^2.0"
     }
 }
